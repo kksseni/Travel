@@ -1,0 +1,120 @@
+.calendar{
+    padding-top: 100px;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    background: url("../Travel/ImagesTrips/b3.png")center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.calendar::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:linear-gradient(#ffffff,#00000000);
+    transition: transform .2s linear;
+    z-index: 2;
+}
+#month-calendar{
+   padding:auto;
+    width: 1500px;
+}
+
+.month{
+    margin: 0;
+    padding: 10px 2rem 2rem;
+    z-index: 100;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    color: #010101;
+    list-style: none;
+}
+
+
+.month li{
+    padding: 0;
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.4;
+    letter-spacing: 0.1rem;
+    /* text-transform: uppercase; */
+    font-weight: 700;
+}
+
+.month li.prev,
+.month li.next{
+    cursor: pointer;
+}
+
+.month li.prev{
+    float: left;
+}
+
+.month li.next{
+    float: right;
+}
+
+.month li.year-name{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* дни недели */
+.weekdays{
+    font-size: 25px;
+    margin: 0;
+    padding: 1rem 0;
+    /* background-color: #dddddd; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    z-index: 100;
+    position: relative;
+    color: #000;
+}
+
+.weekdays li{
+    display: inline-block;
+    flex: 0 0 calc(100% / 7);
+    text-align: center;
+}
+
+/* дни */
+.days{
+    margin: 0;
+    padding: 1rem 0;
+    /* background-color: #eeeeee; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-content: flex-start;
+    height: 14rem;
+    z-index: 100;
+    position: relative;
+}
+
+.days li{
+    padding: 0.5rem;
+    list-style: none;
+    display: inline-block;
+    flex: 0 0 calc(100% / 7);
+    text-align: center;
+    color: rgba(96, 96, 96, 0.745);
+    font-size: 23px;
+    line-height: 1rem;
+}
+
+.days li.date-now{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+
+}
